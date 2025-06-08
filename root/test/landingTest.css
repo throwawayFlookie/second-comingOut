@@ -1,0 +1,263 @@
+/* Reset & base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: #0d0d0d; /* almost black */
+    color: #f0f0f0; /* soft white */
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* Main content container */
+.container {
+    max-width: 600px;
+    text-align: center;
+    background-color: #1a1a1a;
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    margin-bottom: 2rem;
+}
+
+/* Headings and text */
+.container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.container p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+/* Spacer between container and buttons */
+.spacer {
+    height: 3rem;
+}
+
+/* Button container */
+.button-section {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Base button style */
+.button {
+    background-color: #1a1a1a;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+button.nonbinary {
+  position: relative;
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: 1px solid #b28edc; /* soft purple border */
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  transition: all 0.2s ease-in;
+}
+
+/* Softer hover effect */
+button.nonbinary:hover {
+  background: linear-gradient(
+    135deg,
+    #fff430cc,
+    #ffffffcc,
+    #b28edccc
+  );
+  color: #0d0d0d;
+  box-shadow: 0 0 10px 2px #fff43066, 0 0 20px 4px #b28edc55;
+  transition: all 0.2s ease-out;
+}
+
+/* Shine animation, less intense */
+button.nonbinary::before {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #ffffffaa;
+  box-shadow: 0 0 30px 15px #ffffff55;
+  transform: skewX(-20deg);
+}
+
+button.nonbinary:hover::before {
+  animation: sh02 0.5s linear;
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+button.nonbinary:active {
+  box-shadow: 0 0 0 0 transparent;
+  transition: box-shadow 0.2s ease-in;
+}
+
+button.autism {
+  position: relative;
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: 2px solid #888;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  background: linear-gradient(
+    90deg,
+    #ff0055,
+    #ff9900,
+    #ffee00,
+    #33cc33,
+    #0099ff,
+    #9933ff
+  );
+  color: #ffffff;
+  text-transform: uppercase;
+  overflow: hidden;
+  z-index: 0;
+  transition: all 0.3s ease;
+  background-size: 300%;
+  background-position: center;
+  box-shadow: 0 0 4px 2px #00000055;
+}
+
+/* Rainbow border (same as before) */
+button.autism::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    130deg,
+    #ff0055,
+    #ff9900,
+    #ffee00,
+    #33cc33,
+    #0099ff,
+    #9933ff,
+    #ff0055
+  );
+  background-size: 400%;
+  z-index: -1;
+  border-radius: 12px;
+  filter: brightness(0.6);
+  animation: rainbowBorder 20s linear infinite;
+  opacity: 0.8;
+}
+
+/* Remove black mask — we *want* to see the inside now */
+button.autism::after {
+  display: none;
+}
+
+/* Hover effect */
+button.autism:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px 5px #ffffff44;
+}
+
+/* Keyframes for border cycling */
+@keyframes rainbowBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+button.cry {
+  position: relative;
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: 2px solid #800000;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  background: #1a0000;
+  color: #ff4d4d;
+  text-transform: uppercase;
+  overflow: hidden;
+  z-index: 0;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 10px #330000aa, 0 0 5px #00000055;
+}
+
+/* Flickering glow */
+button.cry::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: radial-gradient(circle at center, rgba(255, 0, 0, 0.3) 0%, transparent 70%);
+  opacity: 0.5;
+  z-index: -1;
+  animation: flicker 1.5s infinite ease-in-out;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+/* Hover effect: it heats up */
+button.cry:hover {
+  background: #330000;
+  color: #ff6666;
+  box-shadow: 0 0 20px 6px rgba(255, 0, 0, 0.4);
+  transform: scale(1.03);
+}

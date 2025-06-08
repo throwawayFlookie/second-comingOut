@@ -1,0 +1,48 @@
+/* Reset & base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: #0d0d0d; /* almost black */
+    color: #f0f0f0; /* soft white */
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* Main content container */
+.container {
+    max-width: 800px;
+    background-color: #1a1a1a;
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    margin-bottom: 2rem;
+}
+
+/* Headings and text */
+.container h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.container p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #cccccc;
+    text-align: justify;
+}
+
+.spacer {
+    height: 3rem;
+}
+

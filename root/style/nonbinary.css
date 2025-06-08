@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e0c3ac; /* your iconic original tone */
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  background-color: #e4cab7; /* slightly darker, cozy contrast */
+  border-radius: 20px;
+  padding: 5rem;
+  max-width: 800px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.container p {
+    text-align: justify;
+    color: #3A2C27;
+}
+
+.container li {
+    text-align: left;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #3A2C27;
+  text-align: center;
+}
+
+.flag-container img {
+  width: 960px; 
+  height: 540px; 
+}
+

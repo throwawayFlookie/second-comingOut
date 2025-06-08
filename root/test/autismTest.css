@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f8d5ec, #d5e7f8, #d6f8d5, #f8f3d5, #f8d5d5);
+  background-size: 400% 400%;
+  animation: gentleGradient 30s ease infinite;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes gentleGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  padding: 5rem;
+  max-width: 800px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+
+.container p {
+  text-align: justify;
+  color: #333;
+}
+
+.container li {
+  text-align: left;
+  color: #444;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #f78fb3, #f8a5c2, #c7ecee, #63cdda, #ffda79);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+}
