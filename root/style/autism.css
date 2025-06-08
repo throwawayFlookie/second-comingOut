@@ -4,7 +4,6 @@ body {
   background: linear-gradient(135deg, #f8d5ec, #d5e7f8, #d6f8d5, #f8f3d5, #f8d5d5);
   background-size: 400% 400%;
   animation: gentleGradient 30s ease infinite;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
