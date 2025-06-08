@@ -2,7 +2,6 @@ body {
   margin: 0;
   padding: 0;
   background-color: #e0c3ac; /* your iconic original tone */
-  font-family: 'Comic Sans MS', cursive, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
